@@ -45,8 +45,9 @@ public class Empresa
      */
     public Empresa( )
     {
-        linea1 = new LineaTelefonica( );
-
+        linea1 = new LineaTelefonica();
+        linea2 = new LineaTelefonica();
+        linea3 = new LineaTelefonica();
 
         // TODO Parte3 PuntoA: Construir linea2 y linea3.
 
@@ -58,6 +59,7 @@ public class Empresa
      */
     public LineaTelefonica darLinea1( )
     {
+        return linea1;
         // TODO Parte3 PuntoB: Completar el m�todo seg�n la documentaci�n dada.
     }
 
@@ -67,6 +69,7 @@ public class Empresa
      */
     public LineaTelefonica darLinea2( )
     {
+        return linea2;
         // TODO Parte3 PuntoC: Completar el m�todo seg�n la documentaci�n dada.
     }
 
@@ -76,6 +79,7 @@ public class Empresa
      */
     public LineaTelefonica darLinea3( )
     {
+        return linea3;
         // TODO Parte3 PuntoD: Completar el m�todo seg�n la documentaci�n dada.
     }
 
@@ -85,6 +89,7 @@ public class Empresa
 	 */
 	public int darTotalNumeroLlamadas( )
 	{
+        return linea1.darNumeroLlamadas() + linea2.darNumeroLlamadas() + linea3.darNumeroLlamadas();
         // TODO Parte3 PuntoE: Completar el m�todo seg�n la documentaci�n dada.
 	}
 
@@ -94,6 +99,7 @@ public class Empresa
 	 */
 	public int darTotalMinutos( )
 	{
+        return linea1.darNumeroMinutos() + linea2.darNumeroMinutos() + linea3.darNumeroMinutos();
         // TODO Parte3 PuntoF: Completar el m�todo seg�n la documentaci�n dada.
 	}
 
@@ -103,6 +109,7 @@ public class Empresa
 	 */
 	public double darTotalCostoLlamadas( )
 	{        
+        return linea1.darCostoLlamadas() + linea2.darCostoLlamadas() + linea3.darCostoLlamadas();
         // TODO Parte3 PuntoG: Completar el m�todo seg�n la documentaci�n dada.
 	}
 
@@ -112,6 +119,11 @@ public class Empresa
 	 */
 	public double darCostoPromedioMinuto( )
 	{
+        int totalMinutos = darTotalMinutos();
+        if(totalMinutos > 0) {
+            return darTotalCostoLlamadas() / totalMinutos;
+        }
+        return 0.0;
         // TODO Parte3 PuntoH: Completar el m�todo seg�n la documentaci�n dada.
 	}
 
@@ -132,6 +144,7 @@ public class Empresa
      */
     public void agregarLlamadaLocalLinea2( int pMinutos )
     {
+        linea2.agregarLlamadaLocal(pMinutos);
         // TODO Parte3 PuntoI: Completar el m�todo seg�n la documentaci�n dada.
     }
 
@@ -142,6 +155,7 @@ public class Empresa
      */
     public void agregarLlamadaLocalLinea3( int pMinutos )
     {
+         linea3.agregarLlamadaLocal(pMinutos);
         // TODO Parte3 PuntoJ: Completar el m�todo seg�n la documentaci�n dada.
     }
 
@@ -162,6 +176,8 @@ public class Empresa
      */
     public void agregarLlamadaLargaDistanciaLinea2( int pMinutos )
     {
+
+        linea2.agregarLlamadaLargaDistancia(pMinutos);
         // TODO Parte3 PuntoK: Completar el m�todo seg�n la documentaci�n dada.
     }
 
@@ -172,6 +188,7 @@ public class Empresa
      */
     public void agregarLlamadaLargaDistanciaLinea3( int pMinutos )
     {
+        linea3.agregarLlamadaLargaDistancia(pMinutos);
         // TODO Parte3 PuntoL: Completar el m�todo seg�n la documentaci�n dada.
     }
 
@@ -192,6 +209,7 @@ public class Empresa
      */
     public void agregarLlamadaCelularLinea2( int pMinutos )
     {
+        linea2.agregarLlamadaCelular(pMinutos);
         // TODO Parte3 PuntoM: Completar el m�todo seg�n la documentaci�n dada.
     }
 
@@ -202,6 +220,7 @@ public class Empresa
      */
     public void agregarLlamadaCelularLinea3( int pMinutos )
     {
+        linea3.agregarLlamadaCelular(pMinutos);
         // TODO Parte3 PuntoN: Completar el m�todo seg�n la documentaci�n dada.
     }
 
@@ -211,7 +230,9 @@ public class Empresa
      */
     public void reiniciar( )
     {
-        linea1.reiniciar( );
+        linea1.reiniciar();
+        linea2.reiniciar();
+        linea3.reiniciar();
         // TODO Parte3 PuntoB: Completar el m�todo para reiniciar las lineas 2 y 3.
     }
 

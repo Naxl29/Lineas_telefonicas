@@ -46,7 +46,6 @@ public class LineaTelefonica
     public LineaTelefonica( )
     {
     	// TODO Parte2 PuntoA: Inicializar el n�mero de llamadas, n�mero de minutos y costo de llamadas en 0.
-        numeroLlamadas = 0;
         numeroMinutos = 0;
         costoLlamadas = 0;
     }
@@ -69,7 +68,6 @@ public class LineaTelefonica
     {
         // TODO Parte2 PuntoC: Completar el m�todo seg�n la documentaci�n dada.
         return numeroLlamadas;
-    }
 
     /**
      * Retorna el n�mero de minutos consumidos.
