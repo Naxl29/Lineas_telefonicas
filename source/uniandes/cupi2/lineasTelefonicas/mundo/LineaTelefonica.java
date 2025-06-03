@@ -130,7 +130,6 @@ public class LineaTelefonica
      */
     public void agregarLlamadaCelular( int pMinutos )
     {
-        // TODO Parte2 PuntoG: Completar el m�todo seg�n la documentaci�n dada.
         numeroLlamadas = numeroLlamadas + 1;
         numeroMinutos = numeroMinutos + pMinutos;
         costoLlamadas = costoLlamadas + ( pMinutos * 999 );
