@@ -46,6 +46,7 @@ public class LineaTelefonica
     public LineaTelefonica( )
     {
     	// TODO Parte2 PuntoA: Inicializar el n�mero de llamadas, n�mero de minutos y costo de llamadas en 0.
+        numeroLlamadas = 0;
         numeroMinutos = 0;
         costoLlamadas = 0;
     }
@@ -68,6 +69,7 @@ public class LineaTelefonica
     {
         // TODO Parte2 PuntoC: Completar el m�todo seg�n la documentaci�n dada.
         return numeroLlamadas;
+    }
 
     /**
      * Retorna el n�mero de minutos consumidos.
@@ -116,6 +118,9 @@ public class LineaTelefonica
     public void agregarLlamadaLargaDistancia( int pMinutos )
     {
         // TODO Parte2 PuntoF: Completar el m�todo seg�n la documentaci�n dada.
+        numeroLlamadas = numeroLlamadas + 1;
+        numeroMinutos = numeroMinutos + pMinutos;
+        costoLlamadas = costoLlamadas + ( pMinutos * 380 );
     }
 
     /**
@@ -126,6 +131,9 @@ public class LineaTelefonica
     public void agregarLlamadaCelular( int pMinutos )
     {
         // TODO Parte2 PuntoG: Completar el m�todo seg�n la documentaci�n dada.
+        numeroLlamadas = numeroLlamadas + 1;
+        numeroMinutos = numeroMinutos + pMinutos;
+        costoLlamadas = costoLlamadas + ( pMinutos * 999 );
     }
 
 }
