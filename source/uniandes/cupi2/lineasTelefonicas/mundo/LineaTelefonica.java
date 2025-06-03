@@ -73,7 +73,6 @@ public class LineaTelefonica
      * Retorna el n�mero de minutos consumidos.
      * @return N�mero de minutos consumidos.
      */
-    }
     public int darNumeroMinutos( )
     {
         // TODO Parte2 PuntoD: Completar el m�todo seg�n la documentaci�n dada.
